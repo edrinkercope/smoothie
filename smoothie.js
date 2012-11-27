@@ -119,13 +119,10 @@ window.requestAnimFrame = (function(){
 SmoothieChart.prototype.streamTo = function(canvas, delay) {
   var self = this;
   this.render_on_tick = function(time) {
-    self.render(canvas, time);//new Date().getTime() - (delay || 0));
+    self.render(canvas, time);
   };
 
   this.start();
-  //this.canvas = canvas;
-  //self.render(new Date().getTime() - (delay || 0));
-  //window.requestAnimationFrame(self.render,this.canvas);
 };
 
 SmoothieChart.prototype.start = function() {
